@@ -24,4 +24,12 @@ declare module 'leaflet' {
         isFullscreen: () => boolean;
         toggleFullscreen: (options?: FullscreenControlOptions) => void;
     }
+    
+    namespace Control {
+        class Fullscreen extends L.Control {
+            constructor(options?: L.FullscreenControlOptions);
+        }
+
+        function fullscreen(options?: L.FullscreenControlOptions): Fullscreen;
+    }
 }
